@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Вычисление площади прямоугольного треугольника</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #EFF;
+      }
+      h3 {
+        color: #000;
+        text-align: center;
+      }
+      form {
+        max-width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #DDF;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type="reset"] {
+        background-color: #66C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      input[type="button"]:hover,
+      input[type="reset"]:hover {
+        background-color: #6C6;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Вычисление площади прямоугольного треугольника</h3>
+    <form name="form1">
+      <p>Введите размеры катетов</p>
+      Катет A:
+      <input type="text" name="a" /> <br /><br />
+      Катет B:
+      <input type="text" name="b" onblur="calculate()" /> <br /><br />
+      <br /><br />
+      Площадь:
+      <input type="text" name="res" />
+      <br /><br />
+      <input type="reset" value="Очистить" />
+    </form>
+    <script>
+      function calculate() {
+        var a = document.form1.a.value;
+        var b = document.form1.b.value;
+        var s = (a * b) / 2;
+        document.form1.res.value = s;
+      }
+    </script>
+  </body>
+</html>
