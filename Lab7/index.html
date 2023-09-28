@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение квадратного уравнения</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #EFF;
+        }
+        h3 {
+            color: #000;
+            text-align: center;
+        }
+        form {
+            max-width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #DDF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #66C;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button[type="submit"]:hover {
+            background-color: #6C6;
+        }
+    </style>
+</head>
+<body>
+<form action="submit" method="post">
+    <p>Введите коэффициенты:</p>
+    <label>
+        <input type="number" name="a" placeholder="a">
+    </label>
+    <label>
+        <input type="number" name="b" placeholder="b">
+    </label>
+    <label>
+        <input type="number" name="c" placeholder="c">
+    </label>
+    <br>
+    <button type="submit">Рассчитать</button>
+</form>
+<div id="results"></div>
+
+<script>
+    const form = document.forms[0];
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const a = document.querySelector('input[name="a"]').value;
+        const b = document.querySelector('input[name="b"]').value;
+        const c = document.querySelector('input[name="c"]').value;
+
+        if (a === '' || b === '' || c === '') {
+            alert('Заполните все поля!');
+            return;
+        }
+        let hasRealRoots = false;
+        const roots = [];
+        try {
+            const discriminant = Math.pow(b, 2) - 4 * a * c;
+            if (discriminant > 0) {
+                roots.push((-b + Math.sqrt(discriminant)) / (2 * a));
+                roots.push((-b - Math.sqrt(discriminant)) / (2 * a));
+                hasRealRoots = true;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+        const results = document.getElementById('results');
+        if (hasRealRoots) {
+            results.innerHTML = `Корни уравнения: ${roots.toString().replaceAll(',', ', ')}`;
+        } else {
+            results.innerHTML = 'Нет действительных корней';
+        }
+    });
+</script>
+</body>
+</html>
