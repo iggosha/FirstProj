@@ -1,0 +1,32 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 30vw;
+}
+
+input, select, textarea {
+    font-family: 'Unbounded', sans-serif;
+    padding: 1vh;
+    border: 0.5vh solid #F96;
+    width: 30vw;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+}
+
+form{
+    font-family: 'Unbounded', sans-serif;
+    padding: 2vh 2vw;
+    font-size: 3vh;
+    border: 1vh solid #FF9966;
+}
+
+button {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 3vh;
+    background-color: #FF9966;
+    color: #FFF;
+    padding: 2vh 2vw;
+    cursor: pointer;
+}
