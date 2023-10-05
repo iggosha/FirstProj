@@ -12,7 +12,7 @@
         text-align: center;
       }
       form {
-        max-width: 50%;
+        max-width: 25%;
         margin: 0 auto;
         text-align: center;
         background-color: #DDF;
@@ -53,21 +53,26 @@
     <form name="form1">
       <p>Введите размеры катетов</p>
       Катет A:
-      <input type="text" name="a" /> <br /><br />
+      <label>
+        <input type="text" name="a" />
+      </label> <br /><br />
       Катет B:
-      <input type="text" name="b" onblur="calculate()" /> <br /><br />
+      <label>
+        <input type="text" name="b" onblur="calculate()" />
+      </label> <br /><br />
       <br /><br />
       Площадь:
-      <input type="text" name="res" />
+      <label>
+        <input type="text" name="res" />
+      </label>
       <br /><br />
       <input type="reset" value="Очистить" />
     </form>
     <script>
       function calculate() {
-        var a = document.form1.a.value;
-        var b = document.form1.b.value;
-        var s = (a * b) / 2;
-        document.form1.res.value = s;
+        const a = document.form1.a.value;
+        const b = document.form1.b.value;
+        document.form1.res.value = (a * b) / 2;
       }
     </script>
   </body>

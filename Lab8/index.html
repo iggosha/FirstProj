@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #EFF;
+        }
+
+        h1 {
+            color: #000;
+            text-align: center;
+        }
+
+        form {
+            max-width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #DDF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #66C;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6C6;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Приветствие</title>
+</head>
+<body>
+<h1>Сегодня - <span id="date"></span>, <span id="time"></span>,
+    <span id="day"></span>.</h1>
+</body>
+<script>
+    document.getElementById("date").innerHTML = new Date().toLocaleDateString("ru-RU");
+    document.getElementById("time").innerHTML = new Date().toLocaleTimeString("ru-RU", {
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+    document.getElementById("day").innerHTML = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"][new Date().getDay()];
+</script>
+</html>
+<h1>Форма для поиска подстроки:</h1>
+
+<form action="" method="post">
+    Строка: <label>
+    <input type="text" name="string" placeholder="Введите строку">
+</label><br>
+    Подстрока: <label>
+    <input type="text"
+           name="substring"
+           placeholder="Введите подстроку">
+</label><br>
+    <input type="submit" value="Найти">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="results"></div>
+
+</form>
+
+<script>
+    const form = document.forms[0];
+    form.addEventListener("submit",
+        function (event) {
+            event.preventDefault();
+
+            const string = this.string.value;
+            const substring = this.substring.value;
+            const results = document.getElementById('results');
+            if (string && substring) {
+                const index = string.indexOf(substring);
+                if (index > -1) {
+                    results.innerHTML = `Подстрока ${substring} начинается с позиции ${index + 1} в строке ${string}`;
+                } else {
+                    results.innerHTML = "Подстрока не найдена";
+                }
+            }
+        }
+    )
+    ;
+</script>
