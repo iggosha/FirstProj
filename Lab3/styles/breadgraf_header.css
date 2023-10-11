@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&family=Unbounded:wght@300&display=swap');
 
 * {
-    /*border: 2px solid black
-    #FF9900
-    #7F00FF
-    #00FF54
-    */
+    /*border: 2px solid black*/
 }
 
 body {
@@ -24,7 +20,7 @@ figure {
     text-align: center;
     font-size: 3vh;
     margin: 0;
-    padding: 0.5vw;
+    padding: 0;
 }
 
 nav li {
@@ -36,7 +32,6 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    padding: 0;
 }
 
 nav a {
@@ -47,4 +42,15 @@ nav a {
 
 a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, ul:hover, section:hover, footer:hover {
     color: #FF6600;
+}
+
+header {
+    z-index: 10;
+    width: 69.25vw;
+    position: fixed;
+    top:0;
+}
+
+nav, header {
+    padding: 0;
 }

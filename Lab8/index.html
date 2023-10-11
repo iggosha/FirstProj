@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             background-color: #EFF;
+        }
+        section {
+            font-weight: bold;
+            background-color: #DDF;
+            border-radius: 5vh;
+            margin: 0 25vw;
+            padding: 5vh;
         }
 
         h1 {
@@ -93,12 +100,13 @@
     <br>
     <br>
     <div id="results"></div>
-
 </form>
+<br>
+
 
 <script>
-    const form = document.forms[0];
-    form.addEventListener("submit",
+    const form1 = document.forms[0];
+    form1.addEventListener("submit",
         function (event) {
             event.preventDefault();
 
@@ -114,6 +122,35 @@
                 }
             }
         }
-    )
-    ;
+    );
+    class KitchenAppliance {
+        constructor(name, power, brand) {
+            this.name = name;
+            this.power = power;
+            this.brand = brand;
+        }
+
+        getDetails() {
+            return `Имя: ${this.name}, Мощность: ${this.power}W, Марка: ${this.brand}`;
+        }
+
+        changeNameToFork() {
+            this.name = "Вилка"
+        }
+    }
+
+    let appliances = [];
+    for (let i = 0; i < 10; i++) {
+        const name = `прибор ${i + 1}`;
+        const power = Math.floor(Math.random() * 100) + 1;
+        const brand = `бренд ${i + 1}`;
+        appliances.push(new KitchenAppliance(name, power, brand));
+    }
+    document.write("<section style='font-size: 2vh'>Список кухонных электроприборов:")
+
+    for(let i = 0; i < appliances.length; i++){
+        document.write(`<p>${appliances[i].getDetails()}</p>`);
+    }
+    document.write("</section>")
+
 </script>
