@@ -1,87 +1,231 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title>Печём!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="../styles/breadgraf_header.css">
+    <link rel="stylesheet" href="../styles/breadgraf_main.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
 </head>
 <body>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <figure>
+                    <img src="../styles/img.png" id="logo" alt="Логотип Хлебный Граф">
+                    <figcaption>
+                        Хлебный Граф
+                    </figcaption>
+                </figure>
+            </li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#footer">Контакты</a></li>
+            <li>
+                <button><span class="material-symbols-outlined" style="font-size: 5vh">
+                shopping_cart
+                </span>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-<section id="nav">
-    <ul>
-        <li><img src="../styles/logo.jpg" id="logo" alt="Логотип 'Печём!'">
-        </li>
-        <li><a href="#">Печём!</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#menu">Меню</a></li>
-        <li><a href="#contact">Контакты</a></li>
-    </ul>
-</section>
+<div id="about">
+    <article>
+        <h4>Добро пожаловать в нашу булочную "Хлебный Граф"!</h4>
+        <section>
+            Мы предлагаем Вам широкий ассортимент свежей
+            выпечки и кондитерских изделий, изготовленных по традиционным рецептам. Наша продукция изготовлена из
+            натуральных ингредиентов и не содержит искусственных добавок.
+        </section>
+    </article>
+    <aside>
+        <h4>Скидки месяца</h4>
+        <ul>
+            <li>5% скидка на всю выпечку каждый понедельник<br>
+            </li>
+            <li>10% скидка на все пирожные при покупке от 5 шт.<br>
+            </li>
+            <li>Бесплатная доставка при заказе от 1000 ₽<br>
+            </li>
+        </ul>
+    </aside>
+</div>
 
-<section id="about">
-    <h1>Добро пожаловать в нашу булочную "Печём!"</h1>
-    <p>Мы предлагаем свежую выпечку каждый день. Наши булочки и пирожки готовятся из натуральных ингредиентов и с
-        любовью.</p>
-</section>
+<main>
+    <article id="menu">
+        <h2>Меню</h2>
 
-<section id="menu">
-    <h1>Наше меню</h1>
-    <ul style="list-style: none">
-        <li>
-            <h3>Булочки</h3>
+        <section>
             <img src="data:image/jpeg;base64,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">
             <ul class="catalogItem">
-                <li>Сдобные</li>
-                <li>Кукурузные</li>
+                <li><h3>Вкусные булочки:</h3></li>
+                <li>Сдобная</li>
+                <li>Кукурузная</li>
                 <li>С маком</li>
                 <li>С корицей</li>
             </ul>
-        </li>
-        <li>
-            <h3>Пирожки</h3>
+            <ul class="prices">
+                <li><h3>&nbsp;</h3></li>
+                <li>35 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>35 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>45 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+            </ul>
+        </section>
+
+        <section>
             <img src="https://www.povarenok.ru/data/cache/2015jan/25/30/1007750_60938-710x550x.jpg">
             <ul class="catalogItem">
-                <li>Мясные</li>
-                <li>Картофельные</li>
+                <li><h3>Сытные пирожки:</h3>
+                </li>
+                <li>С мясом</li>
+                <li>С картофелем</li>
                 <li>С капустой</li>
                 <li>С сыром</li>
             </ul>
-        </li>
-        <li>
-            <h3>Кондитерские изделия</h3>
+            <ul class="prices">
+                <li><h3>&nbsp;</h3></li>
+                <li>55 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>45 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+            </ul>
+        </section>
+
+        <section>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2WxU_KZjyqrSFbCeRGJlnr9uXeMDmPStzg&usqp=CAU">
             <ul class="catalogItem">
+                <li><h3>От кондитера:</h3>
+                </li>
                 <li>Торты</li>
                 <li>Пирожные</li>
                 <li>Кексы</li>
                 <li>Печенье</li>
             </ul>
-        </li>
-        <li>
-            <h3>Хлеб</h3>
+            <ul class="prices">
+                <li><h3>&nbsp;</h3></li>
+                <li>400 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>200 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>200 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>150 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+            </ul>
+        </section>
+
+        <section>
             <img src="https://kremlin-product.ru/upload/medialibrary/c7d/mjuoi42qset7ccyp8r7420lmin1v5yir/different_types_bread_made_from_wheat_flour-_1_-_1_.jpg">
             <ul class="catalogItem">
+                <li><h3>Свежий хлеб:</h3>
+                </li>
                 <li>Артос</li>
                 <li>Багет</li>
                 <li>Чиабатта</li>
                 <li>Ржаной хлеб</li>
                 <li>Хлеб на закваске</li>
             </ul>
-        </li>
-    </ul>
-</section>
+            <ul class="prices">
+                <li><h3>&nbsp;</h3></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>40 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>30 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+                <li>45 руб.<button><span class="material-symbols-outlined" style="font-size: 3vh">
+                shopping_cart
+                </span></button></li>
+            </ul>
+        </section>
+    </article>
+    <article>
+        <section>
+            <form action="submit" method="post"><h1>Добавить новый продукт</h1>
+                <p class="error">* - обязательное поле</p>
+                <div>
+                    <label for="name">Название *</label>
+                    <input type='text' name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="price">Цена *</label>
+                    <input type='number' name="price" id="price" required step="0.01">
+                </div>
+                <div>
+                    <label for="category">Категория *</label>
+                    <select name="category" id="category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="1">Булочки</option>
+                        <option value="2">Пирожки</option>
+                        <option value="3">Кондитерские изделия</option>
+                        <option value="4">Хлеб</option>
+                    </select></div>
+                <label for="description">
 
-<section id="contact">
+                </label>
+                <textarea name="description" id="description" rows="4" placeholder="Описание">
+        </textarea>
+                <button type="submit">Добавить продукт</button>
+            </form>
+
+            <script> const form = document.forms[0];
+            form.addEventListener('submit', (event) => {
+                document.getElementById("name").value = "";
+                document.getElementById("price").value = "";
+                document.getElementById("category").value = "";
+                document.getElementById("description").value = "";
+                event.preventDefault();
+                alert('Продукт добавлен!');
+            });
+            </script>
+        </section>
+    </article>
+</main>
+
+
+
+<footer id="footer">
     <h3>Контакты</h3>
-    <p>Мы находимся по адресу: г. Печной, ул. Булочная, д. 180.</p>
+    <p>Мы находимся по адресу: Белгородский пр., 87, ТК "Центральный, Белгород, Белгородская обл., 308000.</p>
     <p>Телефон: +7 (123) 456-78-90</p>
-    <p>Электронная почта: golovkov_ie@pechem.ru</p>
-</section>
-
-<section id="footer">
-    <p>© 2023 ООО "Печём!". Все права защищены.</p>
-</section>
-
+    <p>Электронная почта: golovkov_ie@hgraf.ru</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d895.3482573375219!2d36.58907219128644!3d50.60059715613137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41266af78e536501%3A0xa34cf08fe9c75d9b!2z0JzQvtCx0LjQu9GM0L3Ri9C1INGC0LXQu9C10YTQvtC90Ys!5e0!3m2!1sru!2sru!4v1697039576341!5m2!1sru!2sru"
+            width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>© 2023 ООО "Хлебный Граф". Все права защищены.</p>
+</footer>
 </body>
 </html>

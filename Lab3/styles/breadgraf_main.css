@@ -1,0 +1,101 @@
+#about {
+    display: flex;
+}
+
+aside, footer, article, nav {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1vw 3vw;
+    border-radius: 5vh;
+    margin-bottom: 2vh;
+    box-shadow: 1vh 1vw 1vh rgba(255, 102, 0, 0.5);
+}
+
+h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#about > article {
+    width: 70vw;
+}
+
+#menu ul, aside ul {
+    list-style: none;
+}
+
+#menu section {
+    display: flex;
+    border-radius: 5vh;
+    margin-bottom: 5vh;
+    border: 0.5vh solid #FF6600;
+    box-shadow: 1vh 1vw 1vh rgba(255, 102, 0, 0.5);
+    padding-left: 1vw;
+}
+
+
+#menu img {
+    width: 25vw;
+    height: 25vh;
+    border-radius: 1vw;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+menu span {
+    margin: 0;
+    padding: 0;
+}
+.catalogItem li {
+    margin-top: 2.75vh;
+}
+
+iframe {
+    border-radius: 1vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 30vw;
+}
+
+input, select, textarea {
+    font-family: 'Unbounded', sans-serif;
+    padding: 1vh;
+    border: 0.5vh solid #F96;
+    width: 30vw;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+}
+
+form{
+    font-family: 'Unbounded', sans-serif;
+    padding: 2vh 2vw;
+    font-size: 3vh;
+    border: 1vh solid #FF9966;
+}
+
+button {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 3vh;
+    background-color: #FF9966;
+    color: #FFF;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    border: 0;
+    border-radius: 1vh;
+    margin-left: 1vw;
+    margin-top: 1.75vh;
+    box-shadow: 0.1vh 0.1vw 1vh rgba(255, 102, 0, 0.5);
+}
+
+button:hover {
+    background-color: #FF9900;
+}
+button:active {
+    background-color: #FF0000;
+}

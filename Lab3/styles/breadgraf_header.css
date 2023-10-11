@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&family=Unbounded:wght@300&display=swap');
+
+* {
+    /*border: 2px solid black
+    #FF9900
+    #7F00FF
+    #00FF54
+    */
+}
+
+body {
+    font-family: 'Unbounded', sans-serif;
+    background-color: #FF9900;
+    font-size: 3vh;
+    margin: 0 15vw;
+}
+
+#logo {
+    width: 15vh;
+    border-radius: 100%;
+}
+
+figure {
+    text-align: center;
+    font-size: 3vh;
+    margin: 0;
+    padding: 0.5vw;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    font-size: 4vh;
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, ul:hover, section:hover, footer:hover {
+    color: #FF6600;
+}
