@@ -1,6 +1,6 @@
 var size=9;
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "scratch.xml", true);
+xhr.open("GET", "colorsList.xml", true);
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var xmlDoc = xhr.responseXML;
